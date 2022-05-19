@@ -1,5 +1,4 @@
 
-
 public class ClassStudent 
 {
 	public int rollNo = 100;
