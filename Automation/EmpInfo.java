@@ -1,8 +1,8 @@
 
 
-public class EmployeeInfo {
+public class EmpInfo {
 
-	public static void main(String[] args)
+	public static void main(String[] args) 
 	{
 		
 		Employee e = new Employee();

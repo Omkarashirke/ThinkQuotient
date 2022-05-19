@@ -1,4 +1,5 @@
 
+
 public class CopyValue 
 {
 	int id;
