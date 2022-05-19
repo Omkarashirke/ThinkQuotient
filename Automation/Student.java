@@ -1,23 +1,27 @@
 
 
-public class Student 
-{
+public class Student {
 	
 	int id;
 	String name;
-	
-	public static void main(String[] args) 
+	double per;
+
+	public static void main(String[] args)
 	{
+
+		Student stud = new Student();
+		stud.id = 001;
+		stud.name = "Snadesh";
+		stud.per = 78.26;
 		
-		Student s = new Student();
-		s.id = 001;
-		s.name = "Rohit";
-		System.out.println(s.id+"     "+s.name+"    ");
+		System.out.println(stud.id+"   "+stud.name+"   "+stud.per);
+
+		Student stud1 = new Student();
+		stud1.id = 002;
+		stud1.name = "Vijay";
+		stud1.per = 59.36;
 		
-		Student s1 = new Student();
-		s1.id = 002;
-		s1.name = "Amol";
-		System.out.println(s1.id+"    "+s1.name+"     ");
+		System.out.println(stud1.id+"   "+stud1.name+"   "+stud1.per);
 
 	}
 
