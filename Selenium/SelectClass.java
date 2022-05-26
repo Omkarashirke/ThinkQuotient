@@ -32,7 +32,7 @@ public class SelectClass {
 		dr.findElement(By.name("lastname")).sendKeys("Shirke");
 		dr.findElement(By.name("reg_email__")).sendKeys("omkars595@gmail.com");
 		dr.findElement(By.name("reg_email_confirmation__")).sendKeys("omkars595@gmail.com");
-		dr.findElement(By.xpath("//input[@aria-label='New password']")).sendKeys("OmkarShir#23");
+		dr.findElement(By.xpath("//input[@aria-label='New password']")).sendKeys("Password");
 //		dr.findElement(By.xpath("//select[@aria-label='Day']")).sendKeys("28");
 //		dr.findElement(By.xpath("//select[@aria-label='Month']")).sendKeys("Apr");
 //		dr.findElement(By.xpath("//select[@aria-label='Year']")).sendKeys("1994");

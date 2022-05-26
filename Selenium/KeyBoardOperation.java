@@ -45,7 +45,7 @@ public class KeyBoardOperation {
 		
 		
 		//witheour login button login page using enter key
-//		dr.findElement(By.name("pwd")).sendKeys("Omkars@28", Keys.ENTER);
+//		dr.findElement(By.name("pwd")).sendKeys("Password", Keys.ENTER);
 		
 	}
 
