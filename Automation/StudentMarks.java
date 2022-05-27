@@ -1,41 +1,57 @@
 
+import java.util.Scanner;
 
-public class StudentMarks {
+public class StudentMarks 
+{
 	int id;
 	String name;
-	int s1;
-	int s2;
-	int s3;
-	float per;
+	int marks;
 	
-	public void get(int sid, String sname, int phy, int chy, int maths)
+	StudentMarks(int id, String name, int marks)
 	{
-		id = sid;
-		name = sname;
-		s1 = phy;
-		s2 = chy;
-		s3 = maths;
-		
+		this.id = id;
+		this.name = name;
+		this.marks = marks;
 	}
-	
-	public void get1()
+	public String toString()
 	{
-		
-		int sum = s1 + s2 + s3;
-		per= (sum * 100f)/300;
+		return "Id="+id+",Name="+name+",Marks="+marks;
 	}
-	
-	public void show()
+	void display()
 	{
-		System.out.println(id+"  " +name+ "  " +s1+ "  " +s2+"  "+s3+ "  "+per);
+		if(marks>=60)
+			System.out.println("Id="+id+",Name="+name+",Marks="+marks);
 	}
 
-	public static void main(String[] args)
+	public static void main(String[] args) 
 	{
-		StudentMarks s = new StudentMarks();
-		s.get(001, "Amol", 65, 70, 85);;
-		s.get1();
-		s.show();
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size=");
+		int size = sc.nextInt();
+		
+		StudentMarks sm[] = new StudentMarks[size];
+		
+		for(int i=0; i<sm.length; i++)
+		{
+			System.out.println("Enter Id:");
+	    	int id = sc.nextInt();
+	    	System.out.println("Enter Name:");
+	    	String name = sc.next();
+	    	System.out.println("Enter Marks:");
+	    	int marks = sc.nextInt();
+	    	
+	    	sm[i] = new StudentMarks(id, name, marks);
+		}
+		
+//		for(int i=0; i<sm.length; i++)
+//		{
+//			sm[i].display();
+//		}
+		for(StudentMarks s:sm)
+		{
+			s.display();
+		}
 
 	}
 

@@ -1,28 +1,48 @@
 
 
-public class Student {
-	
+import java.util.Scanner;
+
+public class Student
+{
 	int id;
 	String name;
-	double per;
-
-	public static void main(String[] args)
+	int marks;
+	
+	Student(int id, String name, int marks)
 	{
-
-		Student stud = new Student();
-		stud.id = 001;
-		stud.name = "Snadesh";
-		stud.per = 78.26;
+		this.id = id;
+		this.name = name;
+		this.marks=marks;
+	}
+	public String toString()
+	{
+		return "id="+id+", name="+name+", marks="+marks;
+	}
+	
+	public static void main(String[] args) 
+	{
 		
-		System.out.println(stud.id+"   "+stud.name+"   "+stud.per);
-
-		Student stud1 = new Student();
-		stud1.id = 002;
-		stud1.name = "Vijay";
-		stud1.per = 59.36;
+		Scanner sc = new Scanner(System.in);
 		
-		System.out.println(stud1.id+"   "+stud1.name+"   "+stud1.per);
-
+		Student s[] = new Student[2];
+		
+	   
+	    for(int i=0; i<s.length; i++)
+	    {
+	    	System.out.println("Enter Id:");
+	    	int id = sc.nextInt();
+	    	System.out.println("Enter Name:");
+	    	String name = sc.next();
+	    	System.out.println("Enter Marks:");
+	    	int marks = sc.nextInt();
+	    	
+	    	s[i] = new Student(id, name, marks);
+	    }
+	    for(int i=0;i<s.length; i++)
+	    {
+	    	System.out.println(s[i]);
+	    }
+	    
 	}
 
 }

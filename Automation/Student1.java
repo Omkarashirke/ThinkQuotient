@@ -1,44 +1,50 @@
 
 
+import java.util.Scanner;
+
 public class Student1 
 {
-	int id;
+	int roll;
 	String name;
+	int age;
 	int marks;
-	boolean isPlaced=true;
-	
-	public void setId(int id)
+	Student1(int roll, String name, int age, int marks)
 	{
-		this.id = id; 
-	}
-	public void setName(String name)
-	{
+		this.roll = roll;
 		this.name = name;
-	}
-	public void setMarks(int marks)
-	{
+		this.age = age;
 		this.marks = marks;
 	}
-	public void setIsPlace(boolean isPlaced)
+	public String toString()
 	{
-		this.isPlaced = isPlaced;
+		return roll+"   "+name+"   "+age+"   "+marks;
 	}
-	
-	public int getId()
+
+	public static void main(String[] args) 
 	{
-		return id;
-	}
-	public String getName()
-	{
-		return name;
-	}
-	public  int getMarks()
-	{
-		return marks;
-	}
-	public boolean getIsPlaced()
-	{
-		return isPlaced;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size:");
+		int size = sc.nextInt();
+		Student1 s[] = new Student1[size];
+		for(int i=0; i<s.length; i++)
+		{
+			System.out.println("Enter the Roll:");
+			int roll = sc.nextInt();
+			System.out.println("Enter the Name:");
+			String name = sc.next();
+			System.out.println("Enter the Age:");
+			int age = sc.nextInt();
+			System.out.println("Enter the Marks:");
+			int marks = sc.nextInt();
+			
+			s[i] = new Student1(roll, name, age, marks);
+		}
+		for(Student1 i:s)
+		{
+			if(i.marks>=60 && i.age<15)
+				System.out.println("   "+i);
+		}
+
 	}
 
 }
